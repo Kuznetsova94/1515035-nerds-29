@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Анастасия Кузнецова](https://up.htmlacademy.ru/htmlcss/29/user/1515035).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 

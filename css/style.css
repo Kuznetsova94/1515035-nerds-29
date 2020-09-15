@@ -1,0 +1,363 @@
+:root {
+  /* Basic colors */
+  --basic-black: #000000;
+  --basic-grayish-blue: #283136;
+  --basic-black-red: #231F20;
+  --basic-very-dark-gray: #444444;
+  --basic-dark-gray: #666666;
+  --basic-gray: #A6A6A6;
+  --basic-light-gray: #DBDBDB;
+  --basic-light-blue: #D7DCDE;
+  --basic-white: #FFFFFF;
+
+  /* Background */
+  --background-header-gray: #EEEEEE;
+  --background-darker-gray: #4D4D4D;
+  --background-icons-gray: #E1E1E1;
+  --background-button-red: #FB565A;
+  --background-button-green: #00CA74;
+  --background-button-yellow: #EFC849;
+  --background-style-yellow: #EFC84A;
+
+  /* Action styles */
+  --hover-red: #E74246;
+  --click-moderate-red: #D7373B;
+  --hover-green: #00BC6C;
+  --click-lime-green: #00AA62;
+  --hovert-orange: #EAB534;
+  --click-vivid-orange: #E5A722;
+  --hover-gray-blue: #B4B9BB;
+  --hover-light-gray: #DFDFDF;
+  --click-light-gray: #D5D5D5;
+
+  /* Opacity */
+  --basic-white-opacity: rgba(255, 255, 255, 0.3);
+  --basic-black-opacity: rgba(0, 0, 0, 0.3);
+  --black-opacity: rgba(0, 0, 0, 0.2);
+}
+
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-grayish-blue);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+.main-header {
+  background-color: var(--background-header-gray);
+}
+
+/* Main navigation */
+
+.main-navigation {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.user-navigation a:hover {
+  color: var(--background-button-red);
+}
+
+.site-navigation a:active,
+.user-navigation a:active {
+  color: var(--basic-black-opacity);
+}
+
+.site-navigation a:focus,
+.user-navigation a:focus {
+  border-bottom: 2px solid #FB565A;
+}
+
+
+/* Main */
+/* Features */
+.features {
+  background-color: var(--background-header-gray);
+}
+
+.features-title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+.features .button {
+  background-color: var(--background-button-red);
+}
+
+.features .button:hover {
+  background-color: var(--hover-red);
+}
+
+.features .button:active {
+  background-color: var(--click-moderate-red);
+  color: var(--basic-white-opacity);
+}
+
+/* Main products */
+
+.products-list {
+  list-style: none;
+}
+
+.products-item {
+  text-align: left;
+}
+
+.products-item h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+
+.site-list-button {
+  background-color: var(--background-button-red);
+}
+
+.site-list-button:hover {
+  background-color: var(--hover-red);
+}
+
+.site-list-button:active {
+  background-color: var(--click-moderate-red);
+  color: var(--basic-white-opacity);
+}
+
+.app-list-button {
+  background-color: var(--background-button-green);
+}
+
+.app-list-button:hover {
+  background-color: var(--hover-green);
+}
+
+.app-list-button:active {
+  background-color: var(--click-lime-green);
+  color: var(--basic-white-opacity);
+}
+
+.presentation-list-button {
+  background-color: var(--background-button-yellow);
+}
+
+.presentation-list-button:hover {
+  background-color: var(--hovert-orange);
+}
+
+.presentation-list-button:active {
+  background-color: var(--click-vivid-orange);
+  color: var(--basic-white-opacity);
+}
+
+/* About company */
+
+.description-title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--basic-black);
+}
+
+.services-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+/* Table */
+
+.main-statistics caption {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.statistics-number {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+
+.statistics-description {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* Partners */
+.partners-list {
+  list-style: none;
+}
+
+
+/* Footer */
+
+.footer-contacts {
+  background-color: var(--background-header-gray);
+}
+
+.contacts {
+  background-color: var(--basic-white);
+}
+
+.footer-contacts .button {
+  background-color: var(--background-button-red);
+}
+
+.footer-contacts .button:hover {
+  background-color: var(--hover-red);
+}
+
+.footer-contacts .button:active {
+  background-color: var(--click-moderate-red);
+  color: var(--basic-white-opacity);
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.company-contacts {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-dark-gray);
+}
+
+.contacts-phone {
+  color: inherit;
+}
+
+.social-list {
+  list-style: none;
+}
+
+.social-button svg {
+  background-color: var(--background-icons-gray);
+}
+
+.social-button svg:hover {
+  background-color: var(--hover-red);
+}
+
+.social-button svg:active {
+  background-color: var(--click-moderate-red);
+  color: var(--basic-white-opacity);
+}
+
+.footer-promo h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: var(--basic-black);
+}
+
+.footer-promo p {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--basic-very-dark-gray);
+}
+
+/* Button */
+
+.button {
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  border: none;
+}
+
+/* Modal */
+.modal h2 {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 53px;
+  color: var(--basic-black);
+}
+
+.modal label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.modal input,
+textarea {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-very-dark-gray);
+  opacity: 0.5;
+}
+
+.modal input:hover,
+textarea:hover {
+  color: var(--hover-gray-blue);
+}
+
+.modal input:focus,
+textarea:focus {
+  color: var(--basic-black);
+}
+
+.modal-button {
+  background-color: var(--background-button-red);
+}
+
+.modal-button:hover {
+  background-color: var(--hover-red);
+}
+
+.modal-button:active {
+  background-color: var(--click-moderate-red);
+  color: var(--basic-white-opacity);
+}
+
+.visually-hidden {
+    display: none;
+  }

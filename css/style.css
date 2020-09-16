@@ -76,6 +76,19 @@ img {
   padding: 0;
 }
 
+/* Buttons */
+
+.button {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  border: none;
+}
+
 /* Header */
 .main-header {
   background-color: var(--background-header-gray);
@@ -98,7 +111,7 @@ img {
 
 .site-navigation .active {
   color: var(--basic-black);
-  border-bottom: 2px solid #FB565A;
+  border-bottom: 2px solid var(--background-button-red);
 }
 
 .site-navigation a:hover,
@@ -413,19 +426,6 @@ img {
 
 .visually-hidden {
   display: none;
-}
-
-/* Buttons */
-
-.button {
-  text-align: center;
-  vertical-align: middle;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: var(--basic-white);
-  border: none;
 }
 
 /* Buttons Interactivity */

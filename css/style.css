@@ -59,6 +59,17 @@ img {
   height: auto;
 }
 
+/* Lists */
+
+.site-navigation,
+.products-list,
+.partners-list,
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Header */
 .main-header {
   background-color: var(--background-header-gray);
@@ -74,13 +85,14 @@ img {
   color: var(--basic-black);
 }
 
-.site-navigation {
-  list-style: none;
-}
-
 .site-navigation a,
 .user-navigation a {
   color: var(--basic-black);
+}
+
+.site-navigation .active {
+  color: var(--basic-black);
+  border-bottom: 2px solid #FB565A;
 }
 
 .site-navigation a:hover,
@@ -88,14 +100,9 @@ img {
   color: var(--background-button-red);
 }
 
-.site-navigation a:active,
-.user-navigation a:active {
-  color: var(--basic-black-opacity);
-}
-
 .site-navigation a:focus,
 .user-navigation a:focus {
-  border-bottom: 2px solid #FB565A;
+  color: var(--basic-black-opacity);
 }
 
 
@@ -112,73 +119,17 @@ img {
   color: var(--basic-black);
 }
 
-.features .button {
-  background-color: var(--background-button-red);
-}
-
-.features .button:hover {
-  background-color: var(--hover-red);
-}
-
-.features .button:active {
-  background-color: var(--click-moderate-red);
-  color: var(--basic-white-opacity);
-}
-
 /* Main products */
-
-.products-list {
-  list-style: none;
-}
 
 .products-item {
   text-align: left;
 }
 
-.products-item h3 {
+.products-name {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-black);
-}
-
-.site-list-button {
-  background-color: var(--background-button-red);
-}
-
-.site-list-button:hover {
-  background-color: var(--hover-red);
-}
-
-.site-list-button:active {
-  background-color: var(--click-moderate-red);
-  color: var(--basic-white-opacity);
-}
-
-.app-list-button {
-  background-color: var(--background-button-green);
-}
-
-.app-list-button:hover {
-  background-color: var(--hover-green);
-}
-
-.app-list-button:active {
-  background-color: var(--click-lime-green);
-  color: var(--basic-white-opacity);
-}
-
-.presentation-list-button {
-  background-color: var(--background-button-yellow);
-}
-
-.presentation-list-button:hover {
-  background-color: var(--hovert-orange);
-}
-
-.presentation-list-button:active {
-  background-color: var(--click-vivid-orange);
-  color: var(--basic-white-opacity);
 }
 
 /* About company */
@@ -199,7 +150,7 @@ img {
 
 /* Table */
 
-.main-statistics caption {
+.statistics-caption {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -219,12 +170,6 @@ img {
   line-height: 18px;
 }
 
-/* Partners */
-.partners-list {
-  list-style: none;
-}
-
-
 /* Footer */
 
 .footer-contacts {
@@ -233,19 +178,6 @@ img {
 
 .contacts {
   background-color: var(--basic-white);
-}
-
-.footer-contacts .button {
-  background-color: var(--background-button-red);
-}
-
-.footer-contacts .button:hover {
-  background-color: var(--hover-red);
-}
-
-.footer-contacts .button:active {
-  background-color: var(--click-moderate-red);
-  color: var(--basic-white-opacity);
 }
 
 .company-name {
@@ -266,24 +198,23 @@ img {
   color: inherit;
 }
 
-.social-list {
-  list-style: none;
-}
+/* Неудачные попытки
+.app-list-button svg {
+    fill: red;
+  }
+  
+  .social-button svg:hover {
+    fill: var(--hover-red);
+  }
+  
+  .social-button svg:active {
+    fill: var(--click-moderate-red);
+    color: var(--basic-white-opacity);
+  }
+*/
 
-.social-button svg {
-  background-color: var(--background-icons-gray);
-}
 
-.social-button svg:hover {
-  background-color: var(--hover-red);
-}
-
-.social-button svg:active {
-  background-color: var(--click-moderate-red);
-  color: var(--basic-white-opacity);
-}
-
-.footer-promo h2 {
+.promo-title {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
@@ -291,17 +222,59 @@ img {
   color: var(--basic-black);
 }
 
-.footer-promo p {
+.promo-description {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
   color: var(--basic-very-dark-gray);
 }
 
-/* Button */
+
+/* Modal */
+.modal-title {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 53px;
+  color: var(--basic-black);
+}
+
+.modal-name-label,
+.modal-email-label,
+.textarea-label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.modal-name-field,
+.modal-email-field,
+.modal-message-field {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-very-dark-gray);
+  opacity: 0.5;
+}
+
+.modal-name-field:hover,
+.modal-email-field:hover,
+.modal-message-field:hover {
+  color: var(--hover-gray-blue);
+}
+
+.modal-name-field:focus,
+.modal-email-field:focus,
+.modal-message-field:focus {
+  color: var(--basic-black);
+}
+
+.visually-hidden {
+  display: none;
+}
+
+/* Buttons */
 
 .button {
-  font: inherit;
   text-align: center;
   vertical-align: middle;
   font-weight: 500;
@@ -312,52 +285,57 @@ img {
   border: none;
 }
 
-/* Modal */
-.modal h2 {
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 53px;
-  color: var(--basic-black);
-}
+/* Buttons Interactivity */
+/* Red Buttons */
 
-.modal label {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--basic-black);
-}
-
-.modal input,
-textarea {
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--basic-very-dark-gray);
-  opacity: 0.5;
-}
-
-.modal input:hover,
-textarea:hover {
-  color: var(--hover-gray-blue);
-}
-
-.modal input:focus,
-textarea:focus {
-  color: var(--basic-black);
-}
-
+.features .button,
+.site-list-button,
+.footer-contacts .button,
 .modal-button {
   background-color: var(--background-button-red);
 }
 
+.features .button:hover,
+.site-list-button:hover,
+.footer-contacts .button:hover,
 .modal-button:hover {
   background-color: var(--hover-red);
 }
 
+.features .button:active,
+.site-list-button:active,
+.footer-contacts .button:active,
 .modal-button:active {
   background-color: var(--click-moderate-red);
   color: var(--basic-white-opacity);
 }
 
-.visually-hidden {
-    display: none;
-  }
+/*Green Buttons */
+
+.app-list-button {
+  background-color: var(--background-button-green);
+}
+
+.app-list-button:hover {
+  background-color: var(--hover-green);
+}
+
+.app-list-button:active {
+  background-color: var(--click-lime-green);
+  color: var(--basic-white-opacity);
+}
+
+/* Yellow Buttons */
+
+.presentation-list-button {
+  background-color: var(--background-button-yellow);
+}
+
+.presentation-list-button:hover {
+  background-color: var(--hovert-orange);
+}
+
+.presentation-list-button:active {
+  background-color: var(--click-vivid-orange);
+  color: var(--basic-white-opacity);
+}

@@ -35,6 +35,7 @@
   --small-black-opacity: rgba(0, 0, 0, 0.6);
   --basic-black-opacity: rgba(0, 0, 0, 0.3);
   --black-opacity: rgba(0, 0, 0, 0.2);
+  --gray-opacity: rgba(166,166,166, 0.2);
 }
 
 /* Global */
@@ -92,6 +93,9 @@ img {
 /* Header */
 .main-header {
   background-color: var(--background-header-gray);
+}
+.main-header-logo svg:active #logo{
+  fill: var(--basic-gray);
 }
 
 /* Main navigation */
@@ -189,6 +193,18 @@ img {
   line-height: 18px;
 }
 
+/* Partners */
+
+.partners-item img{
+  opacity: 0.2;
+}
+.partners-item img:hover{
+  opacity: 1;
+}
+.partners-item img:active{
+  opacity: 0.1;
+}
+
 /*===================================catalog.html===================================*/
 /* Main */
 .container-title {
@@ -262,8 +278,28 @@ img {
 }
 
 .sort-item a:focus,
-.extra-sort-item a:focus {
+.extra-sort-item a:focus{
   color: var(--basic-black);
+}
+
+
+.extra-sort-item svg #arrow-down,
+.extra-sort-item svg #arrow-up
+{
+fill: var(--gray-opacity);
+}
+
+.extra-sort-item svg:hover #arrow-down,
+.extra-sort-item svg:hover #arrow-up
+{
+fill: var(--basic-gray);
+}
+
+.extra-sort-item svg:active #arrow-down,
+.extra-sort-item svg:active #arrow-up,
+.active-arrow svg #arrow-down
+{
+fill: var(--basic-black-red);
 }
 
 /* Templates List */
@@ -354,21 +390,9 @@ img {
   color: inherit;
 }
 
-/* Неудачные попытки
-.app-list-button svg {
-    fill: red;
-  }
-  
-  .social-button svg:hover {
-    fill: var(--hover-red);
-  }
-  
-  .social-button svg:active {
-    fill: var(--click-moderate-red);
-    color: var(--basic-white-opacity);
-  }
-*/
-
+/*.social-item{
+  background: url("../img/circle-shape.svg") no-repeat;
+}*/
 
 .promo-title {
   font-weight: bold;
@@ -433,21 +457,21 @@ img {
 
 .features .button,
 .site-list-button,
-.footer-contacts .button,
+.contact-button,
 .modal-button {
   background-color: var(--background-button-red);
 }
 
 .features .button:hover,
 .site-list-button:hover,
-.footer-contacts .button:hover,
+.contact-button:hover,
 .modal-button:hover {
   background-color: var(--hover-red);
 }
 
 .features .button:active,
 .site-list-button:active,
-.footer-contacts .button:active,
+.contact-button:active,
 .modal-button:active {
   background-color: var(--click-moderate-red);
   color: var(--basic-white-opacity);

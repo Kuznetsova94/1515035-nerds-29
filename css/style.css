@@ -94,7 +94,8 @@ img {
 .main-header {
   background-color: var(--background-header-gray);
 }
-.main-header-logo svg:active #logo{
+.main-header-logo svg:active #Shape,
+.main-header-logo svg:active #Shape_2{
   fill: var(--basic-gray);
 }
 

@@ -12,6 +12,7 @@
 </head>
 
 <body class="page-body">
+
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
@@ -37,32 +38,40 @@
       </div>
     </nav>
   </header>
+
   <main class="container">
     <h1 class="visually-hidden">Дизайн-студия Нердс</h1>
+
     <section class="features">
       <h2 class="visually-hidden">Преимущества</h2>
-      <div class="features-item slide1">
-        <p class="features-title"> Долго, дорого, <br>
-          скрупулезно.</p>
-        <p>Математически выверенный дизайн <br>
-          для вашего сайта или мобильного приложения.</p>
-        <a class="button" href="#">Узнать больше</a>
-      </div>
-      <div class="features-item slide2">
-        <p class="features-title">Любим математику <br>
-          как никто другой</p>
-        <p>Никакого креатива, только математические формулы <br>
-          для расчета идеальных пропорций</p>
-        <a class="button" href="#">Узнать больше</a>
-      </div>
-      <div class="features-item slide3">
-        <p class="features-title">Только ночь, <br>
-          только хардкор</p>
-        <p>Работать днем, как все? Мы против этого. <br>
-          Ближе к полуночи работа только начинается.</p>
-        <a class="button" href="#">Узнать больше</a>
+
+      <!-- Обертка, чтобы оцентровать features-->
+      <div class="slider-wrapper">
+        <div class="features-item slide1">
+          <p class="features-title"> Долго, дорого, <br>
+            скрупулезно.</p>
+          <p>Математически выверенный дизайн <br>
+            для вашего сайта или мобильного приложения.</p>
+          <a class="button" href="#">Узнать больше</a>
+        </div>
+        <div class="features-item slide2">
+          <p class="features-title">Любим математику <br>
+            как никто другой</p>
+          <p>Никакого креатива, только математические формулы <br>
+            для расчета идеальных пропорций</p>
+          <a class="button" href="#">Узнать больше</a>
+        </div>
+        <div class="features-item slide3">
+          <p class="features-title">Только ночь, <br>
+            только хардкор</p>
+          <p>Работать днем, как все? Мы против этого. <br>
+            Ближе к полуночи работа только начинается.</p>
+          <a class="button" href="#">Узнать больше</a>
+        </div>
+
       </div>
     </section>
+
     <section class="main-products">
       <h2 class="visually-hidden">Основные продукты</h2>
       <ul class="products-list">
@@ -86,9 +95,11 @@
         </li>
       </ul>
     </section>
+
     <section class="company-description">
       <h2 class="visually-hidden">Описание компании</h2>
-      <div>
+
+      <div class="company-information">
         <p class="description-title">Мы - маленькая, но гордая <br>
           дизайн-студия из Краснодара.</p>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br>
@@ -100,7 +111,8 @@
           <li class="services-item">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
-      <div>
+
+      <div class="statistics-information">
         <table class="main-statistics">
           <caption class="statistics-caption">С 2004 года любим точность во всем:</caption>
           <tr>
@@ -116,11 +128,12 @@
         </table>
       </div>
     </section>
+
     <section class="partners">
       <h2 class="visually-hidden">Основные партнеры</h2>
       <ul class="partners-list">
         <li class="partners-item">
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="./img/html-logo.svg" width="199" height="68"
+          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-logo.svg" width="199" height="68"
               alt="Логотип HTML Academy"></a>
         </li>
         <li class="partners-item">
@@ -138,50 +151,52 @@
   </main>
 
   <footer class="main-footer">
-    <section class="footer-contacts">
-      <h2 class="visually-hidden">Контактная информация</h2>
-      <div class="map">
 
-      </div>
-      <div class="contacts">
-        <p class="company-name">Nёrds design studio</p>
-        <p class="company-contacts">191186, Санкт-Петербург, <br>
-          ул. Б. Конюшенная, д. 19/8
-        </p>
-        <p class="company-contacts">тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-        <a class="contact-button button" href="#">Напишите нам</a>
-      </div>
-    </section>
-    <section class="footer-social">
-      <h2 class="visually-hidden">Социальные сети</h2>
-      <ul class="social-list">
-        <li class="social-item">
-          <a class="social-button" href="#">
-            <span class="visually-hidden">Вконтакте</span>
-            <img src="img/vk-icon.svg" width="26" height="15" alt="Иконка Вконтакте">
-          </a>
-        </li>
-        <li class="social-item">
-          <a class="social-button" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-            <img src="img/fb-icon.svg" width="12" height="22" alt="Иконка Фейсбук">
-          </a>
-        </li>
-        <li class="social-item">
-          <a class="social-button" href="#">
-            <span class="visually-hidden">Инстаграм</span>
-            <img src="img/insta-icon.svg" width="21" height="21" alt="Иконка Инстаграм">
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="footer-promo">
-      <h2 class="promo-title">Давайте дружить, это выгодно!</h2>
-      <p class="promo-description">Скидка 10% для друзей из социальных сетей.</p>
-    </section>
+    <div class="footer-wrapper">
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <div class="contacts">
+          <p class="company-name">Nёrds design studio</p>
+          <p class="company-contacts">191186, Санкт-Петербург, <br>
+            ул. Б. Конюшенная, д. 19/8
+          </p>
+          <p class="company-contacts">тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+          <a class="contact-button button" href="#">Напишите нам</a>
+        </div>
+
+      </section>
+
+      <section class="footer-social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+              <img src="img/vk-icon.svg" width="26" height="15" alt="Иконка Вконтакте">
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+              <img src="img/fb-icon.svg" width="12" height="22" alt="Иконка Фейсбук">
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+              <img src="img/insta-icon.svg" width="21" height="21" alt="Иконка Инстаграм">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-promo">
+        <h2 class="promo-title">Давайте дружить, это выгодно!</h2>
+        <p class="promo-description">Скидка 10% для друзей из социальных сетей.</p>
+      </section>
+    </div>
   </footer>
 
-  <!--Modal-->
+  <!--Modal
 
   <section class="modal modal-email">
     <h2 class="modal-title">Напишите нам</h2>
@@ -195,7 +210,7 @@
         rows="5">В свободной форме</textarea>
     </form>
     <button class="button modal-button" type="submit">Отправить</button>
-  </section>
+  </section>-->
 
 </body>
 

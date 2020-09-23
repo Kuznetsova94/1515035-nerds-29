@@ -35,7 +35,7 @@
   --small-black-opacity: rgba(0, 0, 0, 0.6);
   --basic-black-opacity: rgba(0, 0, 0, 0.3);
   --black-opacity: rgba(0, 0, 0, 0.2);
-  --gray-opacity: rgba(166,166,166, 0.2);
+  --gray-opacity: rgba(166, 166, 166, 0.2);
 }
 
 /* Global */
@@ -94,8 +94,9 @@ img {
 .main-header {
   background-color: var(--background-header-gray);
 }
+
 .main-header-logo svg:active #Shape,
-.main-header-logo svg:active #Shape_2{
+.main-header-logo svg:active #Shape_2 {
   fill: var(--basic-gray);
 }
 
@@ -196,13 +197,15 @@ img {
 
 /* Partners */
 
-.partners-item img{
+.partners-item img {
   opacity: 0.2;
 }
-.partners-item img:hover{
+
+.partners-item img:hover {
   opacity: 1;
 }
-.partners-item img:active{
+
+.partners-item img:active {
   opacity: 0.1;
 }
 
@@ -279,28 +282,25 @@ img {
 }
 
 .sort-item a:focus,
-.extra-sort-item a:focus{
+.extra-sort-item a:focus {
   color: var(--basic-black);
 }
 
 
 .extra-sort-item svg #arrow-down,
-.extra-sort-item svg #arrow-up
-{
-fill: var(--gray-opacity);
+.extra-sort-item svg #arrow-up {
+  fill: var(--gray-opacity);
 }
 
 .extra-sort-item svg:hover #arrow-down,
-.extra-sort-item svg:hover #arrow-up
-{
-fill: var(--basic-gray);
+.extra-sort-item svg:hover #arrow-up {
+  fill: var(--basic-gray);
 }
 
 .extra-sort-item svg:active #arrow-down,
 .extra-sort-item svg:active #arrow-up,
-.active-arrow svg #arrow-down
-{
-fill: var(--basic-black-red);
+.active-arrow svg #arrow-down {
+  fill: var(--basic-black-red);
 }
 
 /* Templates List */
@@ -364,10 +364,6 @@ fill: var(--basic-black-red);
 }
 
 /* Footer */
-
-.footer-contacts {
-  background-color: var(--background-header-gray);
-}
 
 .contacts {
   background-color: var(--basic-white);
@@ -506,4 +502,141 @@ fill: var(--basic-black-red);
 .presentation-list-button:active {
   background-color: var(--click-vivid-orange);
   color: var(--basic-white-opacity);
+}
+
+/*==================================== Grids ===================================*/
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/*==================================== Header Grid ===================================*/
+/* Header */
+/* main-header - контейнер с серым фоном по всей ширине страницы */
+.main-header {
+  background-color: var(--background-header-gray);
+  outline: 5px solid blueviolet;
+  outline-offset: -5px;
+}
+/* main-navigation - обертка для навигации заданной ширины 1160px*/
+.main-navigation {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+  outline: 5px solid limegreen;
+  outline-offset: -5px;
+}
+
+/* Container */
+.container {
+  outline: 5px solid red;
+  outline-offset: -5px;
+}
+/*Features */
+/* features - контейнер с серым фоном по всей ширине страницы */
+.features{
+  background-color: var(--background-header-gray);
+  margin-bottom: 80px;
+  outline: 5px solid black;
+  outline-offset: -5px;
+}
+/* slider-wrapper - обертка для слайдера заданной ширины 1160px*/
+.slider-wrapper{
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+  outline: 5px solid blue;
+  outline-offset: -5px; 
+}
+/*==================================== Main-products Grid ===================================*/
+.main-products{
+  outline: 5px solid green;
+  outline-offset: -5px; 
+  width: 1160px;
+  margin: 0 auto 80px auto;
+  padding: 0 10px;
+}
+.products-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+}
+
+/*==================================== Company Description Grid ===================================*/
+.company-description{
+  display: grid;
+  grid-template-columns: 651px 1fr;
+  gap: 154px;
+  outline: 5px solid orange;
+  outline-offset: -5px; 
+  width: 1160px;
+  margin: 0 auto 73px auto;
+  padding: 0 10px;
+}
+.main-statistics{
+  outline: 5px solid yellow;
+  outline-offset: -5px; 
+}
+
+/*==================================== Partners Grid ===================================*/
+.partners{
+  outline: 5px solid purple;
+  outline-offset: -5px; 
+  width: 1160px;
+  margin: 0 auto 80px auto;
+  padding: 0 10px;
+}
+.partners-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 95px;
+}
+/*==================================== Footer Grid ===================================*/
+/* Main-footer */
+.main-footer {
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+}
+
+.footer-wrapper{
+  display: grid;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+  grid-template-columns: 319px 1fr;
+  grid-template-rows: 416px 1fr;
+  grid-template-areas: 
+  "contacts ."
+  "socials promos";
+  outline: 5px solid green;
+  outline-offset: -5px;
+}
+.footer-contacts{
+  grid-area: contacts;
+  width: 319px;
+  height: 308px;
+  margin-top: 55px;
+  text-align: center;
+  outline: 5px solid pink;
+  outline-offset: -5px;
+}
+.footer-social{
+  grid-area: socials;
+  margin-top: 68px;
+  outline: 5px solid orange;
+  outline-offset: -5px;
+}
+.footer-promo{
+  grid-area: promos;
+  margin-top: 75px;
+  outline: 5px solid rgb(192, 253, 255);
+  outline-offset: -5px;
 }

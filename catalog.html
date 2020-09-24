@@ -13,7 +13,7 @@
 
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation">
+    <nav class="main-navigation wrapper">
       <a class="main-header-logo" href="index.html">
         <svg width="160" height="66" viewBox="0 0 160 66" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="nerds-logo">
@@ -39,11 +39,14 @@
   </header>
 
   <main class="container">
-    <h1 class="container-title">Магазин готовых шаблонов</h1>
-
+    <!-- Контейнер для серого фона -->
+    <div class="main-title">
+      <div class="wrapper">
+        <h1 class="container-title">Магазин готовых шаблонов</h1>
+      </div>
+    </div>
     <!-- Обертка для отцентрирования главной информации -->
-    <div class="catalog-wrapper">
-
+    <div class="catalog-wrapper wrapper">
       <section class="product-filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- Формы -->
@@ -101,6 +104,7 @@
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="cart" id="feature-cart">
                 <label for="feature-cart">Корзина</label>
               </li>
+            </ul>
           </fieldset>
           <a class="button filter-button " href="#">Показать</a>
         </form>
@@ -141,90 +145,90 @@
             <li class="templates-item">
               <a href="#">
                 <img src="img/sedona-template.jpg" width="360" height="580" alt="Макет сайта Sedona">
-                <div class="description">
-                  <h3 class="templates-item-name">Sedona</h3>
               </a>
-              <p class="templates-description">Информационный сайт <br>
-                для туристов</p>
-              <a class="button templates-list-button" href="#">9 900 ₽</a>
+              <div class="description">
+                <h3 class="templates-item-name">Sedona</h3>
+                <p class="templates-description">Информационный сайт <br>
+                  для туристов</p>
+                <a class="button templates-list-button" href="#">9 900 ₽</a>
+              </div>
+            </li>
+            <li class="templates-item">
+              <a href="#">
+                <img src="img/pink-template.jpg" width="360" height="580" alt="Макет Pink_app">
+              </a>
+              <div class="description">
+                <h3 class="templates-item-name">Pink app</h3>
+                <p class="templates-description">Продуктовый лендинг <br>
+                  приложения для iOS и Android</p>
+                <a class="button templates-list-button" href="#">9 900 ₽</a>
+              </div>
+            </li>
+            <li class="templates-item">
+              <a href="#">
+                <img src="img/borodinski-template.jpg" width="360" height="580" alt="Макет сайта Барбершоп Бородинский">
+              </a>
+              <div class="description">
+                <h3 class="templates-item-name">Barbershop</h3>
+                <p class="templates-description">Сайт салона красоты. <br>
+                  Для мужчин, да.
+                </p>
+                <a class="button templates-list-button" href="#">9 900 ₽</a>
+              </div>
+            </li>
+            <li class="templates-item">
+              <a href="#">
+                <img src="img/mishka-template.jpg" width="360" height="580" alt="Макет сайта Mishka">
+              </a>
+              <div class="description">
+                <h3 class="templates-item-name">Mishka</h3>
+                <p class="templates-description">Интернет-магазин <br>
+                  вязаных игрушек
+                </p>
+                <a class="button templates-list-button" href="#">9 900 ₽</a>
+              </div>
+            </li>
+            <li class="templates-item">
+              <a href="#">
+                <img src="img/aplus-template.jpg" width="360" height="580" alt="Макет сайта A Plus">
+              </a>
+              <div class="description">
+                <h3 class="templates-item-name">A Plus</h3>
+                <p class="templates-description">Лендинг курсов повышения <br>
+                  квалификации
+                </p>
+                <a class="button templates-list-button" href="#">9 900 ₽</a>
+              </div>
+            </li>
+            <li class="templates-item">
+              <a href="#">
+                <img src="img/kvast-template.jpg" width="360" height="580" alt="Сайт Кваст">
+              </a>
+              <div class="description">
+                <h3 class="templates-item-name">Кваст</h3>
+                <p class="templates-description">Промо-сайт производителя <br>
+                  крафтового кваса</p>
+                <a class="button templates-list-button" href="#">9 900 ₽</a>
+              </div>
+            </li>
+          </ul>
         </div>
-        </li>
-        <li class="templates-item">
-          <a href="#">
-            <img src="img/pink-template.jpg" width="360" height="580" alt="Макет Pink_app">
-            <div class="description">
-              <h3 class="templates-item-name">Pink app</h3>
-          </a>
-          <p class="templates-description">Продуктовый лендинг <br>
-            приложения для iOS и Android</p>
-          <a class="button templates-list-button" href="#">9 900 ₽</a>
-    </div>
-    </li>
-    <li class="templates-item">
-      <a href="#">
-        <img src="img/borodinski-template.jpg" width="360" height="580" alt="Макет сайта Барбершоп Бородинский">
-        <div class="description">
-          <h3 class="templates-item-name">Barbershop</h3>
-      </a>
-      <p class="templates-description">Сайт салона красоты. <br>
-        Для мужчин, да.
-      </p>
-      <a class="button templates-list-button" href="#">9 900 ₽</a>
-      </div>
-    </li>
-    <li class="templates-item">
-      <a href="#">
-        <img src="img/mishka-template.jpg" width="360" height="580" alt="Макет сайта Mishka">
-        <div class="description">
-        <h3 class="templates-item-name">Mishka</h3>
-      </a>
-      <p class="templates-description">Интернет-магазин <br>
-        вязаных игрушек
-      </p>
-      <a class="button templates-list-button" href="#">9 900 ₽</a>
-    </div>
-    </li>
-    <li class="templates-item">
-      <a href="#">
-        <img src="img/aplus-template.jpg" width="360" height="580" alt="Макет сайта A Plus">
-        <div class="description">
-        <h3 class="templates-item-name">A Plus</h3>
-      </a>
-      <p class="templates-description">Лендинг курсов повышения <br>
-        квалификации
-      </p>
-      <a class="button templates-list-button" href="#">9 900 ₽</a>
-    </div>
-    </li>
-    <li class="templates-item">
-      <a href="#">
-        <img src="img/kvast-template.jpg" width="360" height="580" alt="Сайт Кваст">
-        <div class="description">
-        <h3 class="templates-item-name">Кваст</h3>
-      </a>
-      <p class="templates-description">Промо-сайт производителя <br>
-        крафтового кваса</p>
-      <a class="button templates-list-button" href="#">9 900 ₽</a>
-    </div>
-    </li>
-    </ul>
-    </div>
-    <div class="pagination">
-      <ul class="pagination-list">
-        <li class="pagination-item pagination-item-current"><a>1</a></li>
-        <li class="pagination-item"><a href="#">2</a></li>
-        <li class="pagination-item"><a href="#">3</a></li>
-        <li class="pagination-item"><a href="#">Следующая</a></li>
-      </ul>
-    </div>
-    </section>
+        <div class="pagination">
+          <ul class="pagination-list">
+            <li class="pagination-item pagination-item-current"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">Следующая</a></li>
+          </ul>
+        </div>
+      </section>
     </div>
   </main>
 
   <footer class="main-footer">
 
-    <div class="footer-wrapper">
-      <section class="footer-contacts">
+    <section class="footer-contacts">
+      <div class="wrapper">
         <h2 class="visually-hidden">Контактная информация</h2>
         <div class="contacts">
           <p class="company-name">Nёrds design studio</p>
@@ -234,9 +238,10 @@
           <p class="company-contacts">тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
           <a class="contact-button button" href="#">Напишите нам</a>
         </div>
+      </div>
+    </section>
 
-      </section>
-
+    <div class="footer-wrapper wrapper">
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
@@ -266,6 +271,7 @@
       </section>
     </div>
   </footer>
+
 
 </body>
 

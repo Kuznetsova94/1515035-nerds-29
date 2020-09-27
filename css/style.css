@@ -87,7 +87,7 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-white);
-  border: none;
+  border-radius: 3px;
 }
 
 /* Header */
@@ -371,7 +371,9 @@ img {
 }
 
 /* Footer */
-
+.footer-contacts{
+  background-color: var(--background-header-gray);
+}
 .contacts {
   background-color: var(--basic-white);
 }
@@ -511,7 +513,7 @@ img {
   color: var(--basic-white-opacity);
 }
 
-/*==================================== Grids ===================================*/
+/*==================================== Grids ===================================
 .page {
   height: 100%;
 }
@@ -526,11 +528,11 @@ img {
   width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
-}
+}*/
 
 /*==================================== Header Grid ===================================*/
 /* Header */
-/* main-header - контейнер с серым фоном по всей ширине страницы */
+/* main-header - контейнер с серым фоном по всей ширине страницы 
 .main-header {
   background-color: var(--background-header-gray);
 }
@@ -538,32 +540,36 @@ img {
 .main-navigation {
   display: grid;
   grid-template-columns: min-content 1fr min-content;
-}
+} */
 /*==================================== Features Grid ===================================*/
 /*Features */
-/* features - контейнер с серым фоном по всей ширине страницы */
+/* features - контейнер с серым фоном по всей ширине страницы 
 .features{
   background-color: var(--background-header-gray);
   margin-bottom: 80px;
-}
-/*==================================== Main-products Grid ===================================*/
+} */
+/*==================================== Main-products Grid =================================== */
+
 .main-products{
-  margin-bottom: 80px;
+  margin: 80px 0;
+  outline: 5px solid purple;
+  outline-offset: -5px;
 }
 .products-list{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 100px;
-}
-/*==================================== Company Description Grid ===================================*/
+  gap: 100px;  
+} 
+
+/*==================================== Company Description Grid ===================================
 .company-description{
   display: grid;
   grid-template-columns: 651px 1fr;
   gap: 154px;
   margin-bottom: 73px;
-}
+}*/
 
-/*==================================== Partners Grid ===================================*/
+/*==================================== Partners Grid ===================================
 .partners{
   margin-bottom: 80px;
 }
@@ -571,10 +577,10 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 95px;
-}
+} */
 /*==================================== Footer Grid ===================================*/
 /* Main-footer */
-/* footer-contacts - контейнер с серым фоном по всей ширине страницы */
+/* footer-contacts - контейнер с серым фоном по всей ширине страницы 
 .footer-contacts{
   background-color: var(--background-header-gray);
 }
@@ -582,25 +588,32 @@ img {
 .contacts{
   width: 319px;
   height: 308px;
-}
+} */
 
-/* footer-wrapper - обертка для главного контента заданной ширины 1160px*/
+/* footer-wrapper - обертка для главного контента заданной ширины 1160px 
 .footer-wrapper{
   display: grid;
   grid-template-columns: 319px 1fr;
+  outline: 5px solid greenyellow;
+  outline-offset: -5px;
 }
 .footer-social{
   grid-column: 1/2;
-  margin-top: 68px;
+  margin: 68px 0;
+  background-color: gray;
+  outline: 5px solid red;
+  outline-offset: -5px;
 }
 .footer-promo{
   grid-column: 2/3;
-  margin-top: 75px;
-}
+  margin: 75px 0;
+  outline: 5px solid violet;
+  outline-offset: -5px;
+} */
 
 /*==================================== catalog.html Grids ===================================*/
 /*==================================== Main Grid ===================================*/
-/* Page title */
+/* Page title 
 .main-title{
   background-color: var(--background-header-gray);
 }
@@ -622,4 +635,155 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin-bottom: 54px;
+}*/
+
+/* ================================= Flexbox =====================================*/
+/* Контейнер-центровщик */
+.wrapper{
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
+
+/* Шапка с навигацией */
+.main-navigation{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+.main-header-logo{
+  width: 160px;
+  height: 66px;
+  margin-top: 49px;
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+}
+.site-navigation{
+  display: flex;
+  justify-content: space-between;
+  width: 437px;
+  margin-top: 75px;
+  margin-left: 202px;
+  margin-bottom: 10px;
+  outline: 5px solid red;
+  outline-offset: -5px;
+}
+.user-navigation{
+  width: 75px;
+  margin-top: 75px;
+  margin-left: 246px;
+  margin-bottom: 10px;
+  padding-left: 50px; /* Для будущей иконки рядом */
+  outline: 5px solid blue;
+  outline-offset: -5px;
+}
+
+/* Преимущества */
+.features-item{
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  outline: 5px solid orange;
+  outline-offset: -5px;
+}
+.features-title{
+  margin-top: 77px;
+  margin-bottom: 25px;
+}
+
+.features-item .button{
+  width: 240px;
+  height: 50px;
+  margin-top: 38px;
+  margin-bottom: 80px;
+  margin-right: auto;
+}
+/* Продукция */
+/* С помощью гридов */
+
+/* Описание компании с таблицей */
+.company-description{
+  display: flex;
+  margin-bottom: 73px;
+  margin-top: 39px;
+  outline: 5px solid lightblue;
+  outline-offset: -5px;
+}
+.company-information{
+  outline: 5px solid brown;
+  outline-offset: -5px;
+}
+.description-title{
+  margin: 0;
+  width: 651px;
+  margin-top: 73px;
+  margin-bottom: 32px;
+}
+.statistics-information{
+  display: flex;
+  flex-direction: column;
+  margin-left: 149px;
+  outline: 5px solid green;
+  outline-offset: -5px;
+}
+.statistics-information::before{
+  content: "";
+  width: 360px;
+  height: 208px;
+  margin-top: 39px;
+  margin-bottom: 37px;
+  background-image: url('../img/nerds-illustration.jpg');
+}
+/* Партнеры */
+.partners-list{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center; 
+  margin-bottom: 80px;
+  outline: 5px solid tomato;
+  outline-offset: -5px;
+}
+/* Подвал */
+.footer-contacts{
+  min-height: 416px;
+}
+.contacts{
+  width: 319px;
+  min-height: 308px;
+  margin: 54px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+}
+.contact-button{
+  width: 219px;
+  height: 50px;
+}
+.footer-wrapper{
+  display: flex;
+  outline: 5px solid greenyellow;
+  outline-offset: -5px;
+}
+.footer-social{
+  margin: 68px 0;
+  margin-right: 139px;
+  outline: 5px solid red;
+  outline-offset: -5px;
+}
+.social-list{
+  width: 261px;
+  display: flex;
+  justify-content: space-between;
+  }
+.footer-promo{
+  margin: 75px 0;
+  width: 660px;
+  outline: 5px solid violet;
+  outline-offset: -5px;
+} 

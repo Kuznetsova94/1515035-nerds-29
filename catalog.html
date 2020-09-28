@@ -52,14 +52,14 @@
         <!-- Формы -->
         <form class="filter" method="get" action="https://echo.htmlacademy.ru" oninput="sum.value=numsum.value">
 
-          <fieldset>
-            <label for="numsum" class="filter-title">Стоимость:</label> <br>
+          <fieldset class="range-filter-wrapper">
+            <label for="numsum" class="filter-title range-title">Стоимость:</label> <br>
             <input class="range-filter" type="range" min=0 id="numsum">
             <p class="range-number">от <span class="range-background"> 0 </span>
               до <span class="range-background"> <output name="sum"></output> </span></p>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="radio-filter">
             <legend class="filter-title">Сетка:</legend>
             <ul class="filter-list">
               <li class="filter-option filter-radio">
@@ -79,7 +79,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="checkbox-filter">
             <legend class="filter-title">Особенности:</legend>
             <ul class="filter-list">
               <li class="filter-option filter-checkbox">

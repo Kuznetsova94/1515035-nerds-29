@@ -464,7 +464,7 @@ img {
 .slider-controls button {
   padding: 0;
   width: 18px;
-  height: 18px;
+  min-height: 18px;
   background-color: var(--basic-white);
   border: 1px solid var(--basic-white);
   border-radius: 50%;
@@ -907,8 +907,7 @@ img {
 .modal-name-field:hover,
 .modal-email-field:hover,
 .modal-message-field:hover {
-  color: var(--basic-very-dark-gray);
-  opacity: 0.5;
+  color: var(--hover-gray-blue); 
 }
 
 .modal-name-field:focus,
@@ -1145,6 +1144,7 @@ img {
   background-image: url('../img/checkbox-off.svg');
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.4;
 }
 
 .filter-checkbox input:checked+label::after {
@@ -1152,7 +1152,7 @@ img {
   position: absolute;
   top: 0px;
   left: -34px;
-  width: 26px;
+  width: 25px;
   height: 23px;
   background-image: url('../img/checkbox-on.svg');
   background-color: white;
@@ -1163,9 +1163,15 @@ img {
 /* Interactivity */
 .filter-radio label:hover::before,
 .filter-checkbox label:hover::before,
-.filter-radio input:checked+label:hover::after,
-.filter-checkbox input:checked+label:hover::after {
+.filter-radio input:checked+label:hover::after {
   opacity: 1;
+}
+
+.filter-checkbox input:checked+label:hover::after{
+  background-image: url('../img/checkbox-on-hover.svg');
+  background-color: white;
+  width: 25px;
+  height: 23px;
 }
 
 .filter-radio input:disabled+label,
@@ -1233,7 +1239,7 @@ img {
   margin-right: 25px;
 }
 
-.sort-item:last-child {
+.sort-item:nth-child(3n) {
   margin-right: 0px;
 }
 
@@ -1311,19 +1317,20 @@ img {
   background-color: var(--background-templates-gray);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
   margin-right: 40px;
   margin-bottom: 30px;
 }
 
 .templates-item img {
   display: block;
+  border-radius: 0 0 5px 5px;
 }
 
 .templates-item-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  cursor: pointer;
   /*PixelPerfect*/
   margin-top: 35px;
   margin-left: 2px;
@@ -1336,8 +1343,15 @@ img {
   font-size: 16px;
   line-height: 18px;
   text-align: center;
+  width: 255px;
+  min-height: 37px;
   margin-bottom: 32px;
+  border-radius: 5px;
   color: var(--basic-dark-gray);
+}
+
+.templates-item:hover {
+  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
 }
 
 .templates-item-name:hover {
@@ -1415,7 +1429,7 @@ img {
 
 .pagination-item {
   box-sizing: border-box;
-  height: 50px;
+  min-height: 50px;
   width: 50px;
   margin-right: 11px;
 }
@@ -1430,7 +1444,7 @@ img {
 .pagination-item a {
   display: block;
   box-sizing: border-box;
-  height: 50px;
+  min-height: 50px;
   width: 50px;
   padding: 17px 20px 15px 20px;
   border-radius: 3px;
@@ -1445,7 +1459,7 @@ img {
 
 .pagination-item-current a {
   box-sizing: border-box;
-  height: 50px;
+  min-height: 50px;
   width: 50px;
   padding: 14px 17px 12px 17px;
   background-color: var(--basic-white);
@@ -1454,7 +1468,7 @@ img {
 
 .pagination-item:hover a {
   box-sizing: border-box;
-  height: 50px;
+  min-height: 50px;
   width: 50px;
   padding: 17px 20px 15px 20px;
   background-color: var(--hover-light-gray);
@@ -1525,6 +1539,7 @@ img {
   box-sizing: border-box;
   /*PerfectPixel*/
   margin-left: 50px;
+  margin-right: 50px;
   margin-top: 47px;
 }
 
@@ -1556,6 +1571,7 @@ img {
   /*PerfectPixel*/
   margin-left: 50px;
   margin-top: 37px;
+  margin-bottom: 45px;
 }
 
 .contacts-container::after {

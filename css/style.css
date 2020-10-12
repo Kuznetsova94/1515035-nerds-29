@@ -38,8 +38,10 @@
   --basic-black-opacity: rgba(0, 0, 0, 0.3);
   --black-modal-opacity: rgba(0, 0, 0, 0.4);
   --black-opacity: rgba(0, 0, 0, 0.2);
+  --black-less-opacity: rgba(0, 0, 0, 0.15);
   --black-button-shadow: rgba(0, 1, 1, 0.1);
   --gray-opacity: rgba(166, 166, 166, 0.2);
+  --dark-gray-opacity: rgba(68,68,68, 0.5);
 }
 
 /* Global */
@@ -824,25 +826,30 @@ img {
 .mail-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 761px;
   min-height: 353px;
   /*PixelPerfect*/
   margin-left: 100px;
 }
 
-.modal-name {
+.modal-item {
   width: 360px;
   min-height: 77px;
   /*PixelPerfect*/
   margin-top: 0px;
-  margin-right: 40px;
 }
 
-.modal-name-field,
-.modal-email-field {
+.modal-item input {
   box-sizing: border-box;
   width: 360px;
   min-height: 50px;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--dark-gray-opacity);
+  background-color: transparent;
+  border: 2px solid var( --basic-light-blue);
+  border-radius: 3px;
   /*PixelPerfect*/
   margin-top: 6px;
   padding-top: 13px;
@@ -851,10 +858,12 @@ img {
   padding-right: 14px;
 }
 
-.modal-email {
-  width: 360px;
-  min-height: 77px;
-  margin: 0px;
+.modal-item label,
+.modal-textarea label{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black);
 }
 
 .modal-textarea {
@@ -865,10 +874,16 @@ img {
   margin-bottom: 0px;
 }
 
-.modal-message-field {
+.modal-textarea textarea {
   box-sizing: border-box;
   width: 760px;
   min-height: 118px;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--dark-gray-opacity);
+  background-color: transparent;
+  border: 2px solid var( --basic-light-blue);
+  border-radius: 3px;
   /*PixelPerfect*/
   margin-top: 5px;
   padding-top: 16px;
@@ -880,46 +895,28 @@ img {
   padding: 17px 83px 15px 83px;
   min-height: 50px;
   width: 259px;
+  cursor: pointer;
   /*PixelPerfect*/
   margin-top: 40px;
   border: none;
 }
 
-.modal-name-label,
-.modal-email-label,
-.textarea-label {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--basic-black);
+/*Interactivity Modal*/
+.modal-item input:hover,
+.modal-textarea textarea:hover{
+  border-color: var(--hover-gray-blue); 
 }
 
-.modal-name-field,
-.modal-email-field,
-.modal-message-field {
-  font-size: 16px;
-  line-height: 18px;
+.modal-item input:focus,
+.modal-textarea textarea:focus{
   color: var(--basic-very-dark-gray);
-  opacity: 0.5;
+  border-color: var(--basic-black);
 }
 
-/*Interactivity Modal */
-.modal-name-field:hover,
-.modal-email-field:hover,
-.modal-message-field:hover {
-  color: var(--hover-gray-blue); 
-}
-
-.modal-name-field:focus,
-.modal-email-field:focus,
-.modal-message-field:focus {
-  color: var(--basic-very-dark-gray);
-}
-
-.modal-name-field:invalid,
-.modal-email-field:invalid,
-.modal-message-field:invalid {
+.modal-item input:invalid,
+.modal-textarea textarea:invalid {
   color: var(--hover-red);
+  border-color: var(--hover-red);
 }
 
 /*===================================catalog.html===================================*/
@@ -1020,7 +1017,7 @@ img {
   border: 8px solid var(--basic-white);
   background-color: var(--basic-lighter-gray);
   border-radius: 50%;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 1px var( --black-less-opacity);
   cursor: pointer;
 }
 
@@ -1051,7 +1048,7 @@ img {
   width: 80px;
   min-height: 38px;
   margin-left: 11px;
-  padding: 10px;
+  padding: 8px 10px;
   text-align: center;
   border: none;
   border-radius: 5px;
@@ -1371,6 +1368,8 @@ img {
   min-height: 50px;
   padding: 17px 72px 15px 72px;
   margin-bottom: 44px;
+  border: none;
+  cursor: pointer;
 }
 
 .templates-item:nth-child(2n) {
@@ -1411,6 +1410,7 @@ img {
   position: absolute;
   width: 358px;
   height: 40px;
+  border-radius: 5px 5px 0 0;
   background-image: url('../img/browser.svg');
   opacity: 0.12;
   top: 0px;

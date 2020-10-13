@@ -357,7 +357,7 @@ img {
   content: "";
   position: absolute;
   /*PixelPerfect*/
-  left: 402px;
+  left: 400px;
   top: -10px;
   width: 760px;
   height: 431px;
@@ -483,6 +483,20 @@ img {
 
 .slide-current {
   display: flex;
+  animation: slider 0.9s;
+}
+
+/* Animations */
+
+@keyframes slider {
+  from {
+		top: 0;
+		left: 0;
+  }
+  to {
+    top: 0;
+		left: 0;
+  }
 }
 
 .slider-controls .current-button {
@@ -631,10 +645,6 @@ img {
   padding-left: 35px;
   padding-bottom: 23px;
 }
-
-/*.services-item:last-child {
-  padding-bottom: 0px;
-}*/
 
 .services-item::before {
   content: "";

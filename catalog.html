@@ -166,7 +166,7 @@
                 <h3 class="templates-item-name">Sedona</h3>
                 <p class="templates-description">Информационный сайт <br>
                   для туристов</p>
-                  <button class="button templates-list-button" type="button"
+                <button class="button templates-list-button" type="button"
                   aria-label="Добавить в корзину готовый шаблон сайта Sedona по цене 9 900 рублей">9 900 ₽</button>
               </div>
             </li>
@@ -179,7 +179,8 @@
                 <p class="templates-description">Продуктовый лендинг <br>
                   приложения для iOS и Android</p>
                 <button class="button templates-list-button" type="button"
-                  aria-label="Добавить в корзину готовый шаблон приложения Pink app по цене 9 900 рублей">9 900 ₽</button>
+                  aria-label="Добавить в корзину готовый шаблон приложения Pink app по цене 9 900 рублей">9 900
+                  ₽</button>
               </div>
             </li>
             <li class="templates-item">
@@ -192,7 +193,8 @@
                   Для мужчин, да.
                 </p>
                 <button class="button templates-list-button" type="button"
-                  aria-label="Добавить в корзину готовый шаблон сайта Барбершоп Бородинский по цене 9 900 рублей">9 900 ₽</button>
+                  aria-label="Добавить в корзину готовый шаблон сайта Барбершоп Бородинский по цене 9 900 рублей">9 900
+                  ₽</button>
               </div>
             </li>
             <li class="templates-item">
@@ -229,7 +231,7 @@
                 <h3 class="templates-item-name">Кваст</h3>
                 <p class="templates-description">Промо-сайт производителя <br>
                   крафтового кваса</p>
-                  <button class="button templates-list-button" type="button"
+                <button class="button templates-list-button" type="button"
                   aria-label="Добавить в корзину готовый шаблон сайта Кваст по цене 9 900 рублей">9 900 ₽</button>
               </div>
             </li>
@@ -312,7 +314,28 @@
       </section>
     </div>
   </footer>
-
+  <!--Modal-->
+  <section class="modal modal-mail">
+    <h2 class="modal-title">Напишите нам</h2>
+    <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="modal-item">
+        <label for="name-field">Ваше имя:</label> <br>
+        <input class="name-input" type="text" name="name" id="name-field" placeholder="Имя Фамилия"> <br>
+      </p>
+      <p class="modal-item">
+        <label for="email-field">Ваш email:</label> <br>
+        <input class="email-input" type="text" name="email" id="email-field" placeholder="email@example.com"> <br>
+      </p>
+      <p class="modal-textarea">
+        <label for="message-field">Текст письма:</label> <br>
+        <textarea class="textarea-input" name="message" id="message-field" cols="50"
+          rows="5">В свободной форме</textarea>
+      </p>
+      <button class="button modal-button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+  <script src="./js/popup.js"></script>
 </body>
 
 </html>
